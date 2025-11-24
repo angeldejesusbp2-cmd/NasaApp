@@ -1,22 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import React from 'react';
+import { useState } from 'react';
 import { RootNavigator } from './src/navigation';
 import { AppProvider } from './src/context/AppContext';
 import type { Language, Theme } from './src/context/AppContext';
 import { StorageService } from './src/services';
 import { navigationRef } from './src/navigation/RootNavigator';
-import {
-  HomeScreen,
-  DetailScreen,
-  FavoritesScreen,
-  SearchScreen,
-  SettingsScreen,
-  LanguageScreen,
-  ThemeScreen,
-  HelpScreen,
-  OptionsScreen,
-} from './src/screens';
+import SplashScreen from './src/components/SplashScreen';
 
 export const goTo = (screenName: string, params?: any) => {
   try {
@@ -76,6 +67,15 @@ export const changeTheme = async (theme: Theme) => {
 };
 
 export default function App() {
+  const [isSplashFinished, setIsSplashFinished] = useState(false);
+  const handleSplashFinish = () => {
+    setIsSplashFinished(true);
+  };
+
+  if (!isSplashFinished) {
+    // Pasa la función de callback a tu SplashScreen
+    return <SplashScreen onFinish={handleSplashFinish} />;
+  }
   return (
     <AppProvider>
       <SafeAreaProvider>

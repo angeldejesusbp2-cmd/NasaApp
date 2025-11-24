@@ -148,6 +148,27 @@ export const API_CONFIG = {
 - Algunos videos requieren conexión estable
 - La API de NASA tiene límite de solicitudes por hora
 
+## Capturas de Pantalla de la Aplicación
+
+### Logo de la Aplicación
+![Logo](./images/logo.jpg)
+
+### Inicio de la Aplicación
+![Inicio](./images/inicio.jpg)
+
+### Buscador de la Aplicación
+![Buscador](./images/buscador.jpg)
+
+### Ajustes de la Aplicación
+![Ajustes](./images/ajustes.jpg)
+
+### Idioma de la Aplicación
+![Idioma](./images/idioma.jpg)
+
+### Tema de la Aplicación
+![Tema](./images/tema.jpg)
+
+
 ## 🤝 Contribuir
 
 Las contribuciones son bienvenidas. Por favor:
