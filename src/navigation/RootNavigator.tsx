@@ -8,7 +8,6 @@ import { useAppContext } from '../context/AppContext';
 import {
   HomeScreen,
   DetailScreen,
-  FavoritesScreen,
   SearchScreen,
   SettingsScreen,
   LanguageScreen,
@@ -47,28 +46,6 @@ function HomeStack({ defaultOptions, titles }: { defaultOptions: NativeStackNavi
   );
 }
 
-function FavoritesStack({ defaultOptions, titles }: { defaultOptions: NativeStackNavigationOptions; titles: any }) {
-  return (
-    <Stack.Navigator screenOptions={defaultOptions}>
-      <Stack.Screen
-        name="FavoritesMain"
-        component={FavoritesScreen}
-        options={{ 
-          title: titles.favorites || 'Favoritos',
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="DetailFromFav"
-        component={DetailScreen}
-        options={{ 
-          title: titles.details || 'Detalles',
-          headerBackTitle: titles.back || 'Atrás',
-        }}
-      />
-    </Stack.Navigator>
-  );
-}
 
 function SearchStack({ defaultOptions, titles }: { defaultOptions: NativeStackNavigationOptions; titles: any }) {
   return (
@@ -163,7 +140,6 @@ export function RootNavigator() {
   const titles = {
     home: translations.inicio,
     search: translations.buscar,
-    favorites: translations.favoritos,
     settings: translations.ajustes,
     language: translations.idioma,
     theme: translations.tema,
@@ -182,8 +158,6 @@ export function RootNavigator() {
 
             if (route.name === 'Home') {
               icon = focused ? '🏠' : '🏡';
-            } else if (route.name === 'Favorites') {
-              icon = focused ? '❤️' : '🤍';
             } else if (route.name === 'Search') {
               icon = focused ? '🔍' : '🔎';
             } else if (route.name === 'Settings') {
@@ -214,10 +188,6 @@ export function RootNavigator() {
 
         <Tab.Screen name="Search" options={{ title: titles.search || 'Buscar' }}>
           {props => <SearchStack {...props} defaultOptions={defaultStackScreenOptions} titles={titles} />}
-        </Tab.Screen>
-
-        <Tab.Screen name="Favorites" options={{ title: titles.favorites || 'Favoritos' }}>
-          {props => <FavoritesStack {...props} defaultOptions={defaultStackScreenOptions} titles={titles} />}
         </Tab.Screen>
 
         <Tab.Screen name="Settings" options={{ title: titles.settings || 'Ajustes' }}>

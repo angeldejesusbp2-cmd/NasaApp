@@ -4,7 +4,6 @@ const STORAGE_KEYS = {
   THEME: 'nasa_app_theme',
   LANGUAGE: 'nasa_app_language',
   OPTIONS: 'nasa_app_options',
-  FAVORITES: 'nasa_app_favorites',
 };
 
 export const StorageService = {
@@ -87,39 +86,7 @@ export const StorageService = {
     }
   },
 
-  // Favoritos
-  async getFavorites(): Promise<any[]> {
-    try {
-      const favorites = await AsyncStorage.getItem(STORAGE_KEYS.FAVORITES);
-      return favorites ? JSON.parse(favorites) : [];
-    } catch (error) {
-      console.error('Error getting favorites:', error);
-      return [];
-    }
-  },
-
-  async addFavorite(item: any): Promise<void> {
-    try {
-      const favorites = await this.getFavorites();
-      const exists = favorites.some((fav) => fav.id === item.id);
-      if (!exists) {
-        favorites.push(item);
-        await AsyncStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(favorites));
-      }
-    } catch (error) {
-      console.error('Error adding favorite:', error);
-    }
-  },
-
-  async removeFavorite(itemId: string): Promise<void> {
-    try {
-      const favorites = await this.getFavorites();
-      const filtered = favorites.filter((fav) => fav.id !== itemId);
-      await AsyncStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(filtered));
-    } catch (error) {
-      console.error('Error removing favorite:', error);
-    }
-  },
+  
 
   // Historial de búsqueda
   async addSearchHistory(query: string): Promise<void> {

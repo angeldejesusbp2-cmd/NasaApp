@@ -109,14 +109,7 @@ export default function HomeScreen({ navigation }: { navigation?: any }) {
           <Text style={styles.exploreDescription}>Encuentra imágenes y videos</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.exploreCard}
-          onPress={() => navigation?.navigate('Favorites')}
-        >
-          <Text style={styles.exploreIcon}>❤️</Text>
-          <Text style={styles.exploreTitle}>Tus Favoritos</Text>
-          <Text style={styles.exploreDescription}>Accede a tus guardados</Text>
-        </TouchableOpacity>
+       
       </View>
     </ScrollView>
   );
