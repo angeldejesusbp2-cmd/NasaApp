@@ -150,22 +150,28 @@ export const API_CONFIG = {
 
 ## Capturas de Pantalla de la Aplicación
 
-### Logo de la Aplicación
+### 1. Logo de la Aplicación
 ![Logo](./images/logo.jpg)
 
-### Inicio de la Aplicación
+
+### 2. Inicio de la Aplicación
 ![Inicio](./images/inicio.jpg)
 
-### Buscador de la Aplicación
+
+### 3. Buscador de la Aplicación
 ![Buscador](./images/buscador.jpg)
 
-### Ajustes de la Aplicación
+
+### 4. Ajustes de la Aplicación
 ![Ajustes](./images/ajustes.jpg)
 
-### Idioma de la Aplicación
+
+
+### 5. Idioma de la Aplicación
 ![Idioma](./images/idioma.jpg)
 
-### Tema de la Aplicación
+
+### 6. Tema de la Aplicación
 ![Tema](./images/tema.jpg)
 
 
