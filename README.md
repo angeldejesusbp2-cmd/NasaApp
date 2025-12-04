@@ -185,9 +185,7 @@ Las contribuciones son bienvenidas. Por favor:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
 
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
 
 ## 👥 Autor
 
@@ -223,5 +221,14 @@ Si tienes problemas o preguntas:
 - ⏳ Descargar imágenes
 
 ---
+
+# APK de la aplicacion NasaApp
+
+https://expo.dev/artifacts/eas/uTtES6aWG7NGWdE3PBDfRt.apk
+
+# 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
+
 
 ⭐ Si te gusta este proyecto, no olvides darle una estrella en GitHub!
