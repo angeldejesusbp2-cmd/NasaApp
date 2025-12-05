@@ -29,12 +29,7 @@ export default function DetailScreen({ route, navigation }: DetailScreenProps) {
 
   return (
     <ScrollView style={styles.container}>
-      <TouchableOpacity
-        style={styles.backButton}
-        onPress={() => navigation?.goBack()}
-      >
-        <Text style={styles.backButtonText}>← Atrás</Text>
-      </TouchableOpacity>
+    
 
       <Text style={styles.title}>{item.title}</Text>
 
