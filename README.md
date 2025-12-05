@@ -224,7 +224,7 @@ Si tienes problemas o preguntas:
 
 # APK de la aplicacion NasaApp
 
-https://expo.dev/artifacts/eas/8e2oeAWeUKnqWbXsmvMqxQ.apk
+https://expo.dev/artifacts/eas/myHbA3dkttijMDmmhuM4rr.apk
 
 # 📄 Licencia
 
